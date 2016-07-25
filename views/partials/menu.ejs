@@ -18,8 +18,14 @@
                 <li><a href="/#who-we-are">Who we are</a></li>
                 <li><a href="/#what-we-do">What we do</a></li>
                 <li><a href="/gallery">Gift a memory</a></li>
-                <li><a href="/upload">Upload Images</a></li>
-                <li><a href="#">Contact</a></li>
+                <!--<li><a href="/upload">Upload Images</a></li>-->
+                <% if( session.loggedIn == null ) {%>
+                 <li><a href="/login">Login</a></li>
+                 <li><a href="/signup">Signup</a></li>
+                <%}else{%>
+                <li><a href="/logout">Logout</a></li>
+                <%}%>
+
               </ul>
           </div>
       </div>
