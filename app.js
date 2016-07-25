@@ -9,6 +9,8 @@ app.use(express.static(__dirname + '/public'));
 
 
 app.get('/',routes.home);
+app.get('/gallery',routes.gallery);
+app.get('/upload',routes.upload);
 
 
 

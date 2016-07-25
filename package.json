@@ -9,6 +9,7 @@
   "author": "Mahtab Alam",
   "license": "MIT",
   "dependencies": {
+    "aws-sdk": "^2.4.9",
     "ejs": "^2.4.2",
     "express": "^4.13.4"
   }

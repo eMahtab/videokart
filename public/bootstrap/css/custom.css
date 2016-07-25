@@ -1,10 +1,10 @@
 @font-face {
     font-family: myFirstFont;
-    src: url(Calligraffiti.ttf);    
+    src: url(Calligraffiti.ttf);
 }
 
 .navbar-custom {
-    background-color:#070707 !important;   
+    background-color:#070707 !important;
    /* border-radius:1;*/
 }
 
@@ -17,11 +17,13 @@
 }
 
 a:hover{
-    
-    text-decoration: none !important;
     color: #ffeb3b !important;
 }
 
 a:focus{
-     text-decoration: none !important;
+  color: #ffeb3b !important;
+}
+
+a:active{
+  text-decoration: none !important;
 }
