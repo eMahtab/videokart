@@ -86,7 +86,7 @@
        Function to carry out the actual PUT request to S3 using the signed request from the app.
      */
      function charge(){
-       var amount=5;
+       var amount=100;
        var orderId=new Date().getTime();
        var productType='<%= session.type %>'
        var user='<%= session.username %>'
@@ -109,12 +109,10 @@
              document.getElementById('uploading').style.visibility = "hidden";
              //document.getElementById('afterUpload').style.visibility = "visible";
              document.getElementById('F8462690E8238951AB818D1B2BBD7957').style.visibility = "visible";
-             var fileName = "abc.zip";
-             '<%session["fileName"] = ' + fileName + '; %>';
              //console.log("File uploaded successfully");
            }
            else{
-             alert('Could not upload file. Please try again');
+             alert('Could not upload file. Make sure filename is valid and try again');
            }
          }
        };

@@ -24,7 +24,7 @@ exports.paymentSuccess=function(req,res){
 
         //Sending EMail
 
-         var to = ['alammahtab08@gmail.com']
+         var to = ['alammahtab08@gmail.com','ks.roopkumar@gmail.com']
          var from = 'alammahtab08@gmail.com'
          var filename=req.session.fileName;
          var encodedFilename=filename;
