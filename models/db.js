@@ -25,6 +25,13 @@ var userSchema = new mongoose.Schema({
   created_at:{type:Date,default:Date.now}
 });
 
+var ordersSchema = new mongoose.Schema({
+  username: {type: String},
+  videoType: {type: String},
+  fileName: {type: String},
+  created_at:{type:Date,default:Date.now}
+});
+
 userSchema.pre('save', function(next) {
     var user = this;
     console.log("Before Registering the user");
@@ -57,3 +64,4 @@ userSchema.methods.comparePassword = function(candidatePassword, cb) {
 
 // Build the User model
 mongoose.model( 'User', userSchema,'users' );
+mongoose.model( 'Order', ordersSchema,'orders' );

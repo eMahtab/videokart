@@ -17,7 +17,7 @@
 }
 
 a:hover{
-    color: #ffeb3b !important;
+    color: #ffeb3b  !important;
 }
 
 a:focus{
@@ -25,5 +25,22 @@ a:focus{
 }
 
 a:active{
+  text-decoration: none !important;
+}
+
+.plainLink:hover{
+    color: #337ab7 !important;
+    text-decoration: none !important;
+}
+
+.errorLink:hover{
+    color: #000000 !important;
+}
+
+.errorLink:focus{
+  color: #ffeb3b !important;
+}
+
+.errorLink:active{
   text-decoration: none !important;
 }

@@ -8,6 +8,7 @@ var session=require('express-session');
 
 var routes=require('./routes/route.js');
 var users=require('./routes/user.js');
+var pay=require('./routes/pay.js');
 
 app.set('view engine','ejs');
 
@@ -24,6 +25,8 @@ app.get('/',routes.home);
 app.get('/gallery',routes.gallery);
 app.get('/upload',routes.upload);
 
+app.get('/buy',routes.buy);
+
 app.get('/signup',routes.signup);
 app.post('/signup',users.signup);
 
@@ -32,12 +35,20 @@ app.post('/login',users.login);
 
 app.get('/logout',users.logout);
 
+app.post('/paymentSuccessfull',pay.paymentSuccess);
+//app.get('/paymentSuccessfull',pay.paymentSuccess);
+app.post('/paymentError',pay.paymentError);
+//app.get('/paymentError',pay.paymentError);
+
 
 app.get('/sign-s3', (req, res) => {
   const s3 = new aws.S3();
   const fileName = req.query['file-name'];
   const fileType = req.query['file-type'];
-  console.log("File Type "+fileType);
+  console.log("FileName at server "+fileName);
+  //console.log("File Type "+fileType);
+  req.session.fileName=fileName;
+  console.log("File name is "+req.session.fileName);
   const s3Params = {
     Bucket: S3_BUCKET,
     Key: fileName,
@@ -62,6 +73,17 @@ app.get('/sign-s3', (req, res) => {
   });
 });
 
+app.use(function(req,res){
+     res.status(404);
+     res.render('404',{session:req.session});
+});
+
+
+app.use(function(error,req, res,next){
+     res.status(500);
+     console.log("Error "+error);
+     res.render('500',{session:req.session});
+});
 
 
 

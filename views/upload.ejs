@@ -4,35 +4,78 @@
     <head>
         <title>Videokart : Memories that lasts forever</title>
         <% include partials/cssIncludes.ejs %>
+        <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <script src= "https://www.payumoney.com/Api/REST/op/buttonScript"  async="true"></script>
     </head>
 
 
     <body style="background-color:#ffeb3b">
-
       <% include partials/menu.ejs %>
 
-
       <div class="container">
-        <br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/>
 
+           <h1>Upload the zip file containing all the images</h1>
+           <br/><br/><br/>
 
-
-            <p id="status">Please select a file</p>
-
-
+           <div class="row">
+             <div class="col-sm-offset-4 col-xs-offset-3 col-sm-6">
             <form method="POST" action="/save-details">
-            <input type="file" id="file-input">
-            <input type="submit" value="Update profile">
-           </form>
 
+              <input accept=".zip" type="file" id="file-input">
+              <!--<input type="submit" value="Update profile">-->
+              <br/>
+              </form>
+            </div>
+          </div>
 
+          <div class="row">
+                 <div class="col-sm-offset-4 col-sm-8">
+                   <span style="font-weight:bold">Note: </span>
+                   <span>Make sure uploaded filename does not include special characters (e.g. $,&,% etc.)</span>
+                 </div>
+          </div>
+
+          <div class="row">
+               <div id="uploading" style="visibility:hidden" class="text-center">
+                    <span><i class="fa fa-cog fa-spin fa-3x fa-fw"></i></span><br/>
+                    <h3 align="center">uploading ...</h3>
+               </div>
+          </div>
+
+        <!--    <div class="row">
+               <div id="afterUpload" style="visibility:hidden" class="text-center">
+                    <h2>File uploaded successfully</h2>
+                    <a href="/pay" class="btn btn-primary">Pay Now</a>
+               </div>
+          </div>
+     -->
+          <div class="row">
+             <div class="col-sm-offset-4 col-sm-4 text-center">
+               <span class='pm-button' style="visibility:hidden" id='F8462690E8238951AB818D1B2BBD7957' onclick="charge()">
+                  <h3>File uploaded successfully</h3>
+                 <span class="state active">
+                  <input type="image"
+                  src="https://file.payumoney.com/images/payby_payumoney/buttons/312.png"
+                   width="131" height="37">
+                 </span>
+                 <span class="state clicked" style="display:none" >
+               <input type="image"
+               src="https://file.payumoney.com/images/payby_payumoney/buttons/314.png"
+               width="131" height="37">
+                </span>
+             </span>
+              </div>
+          </div>
 
         <br/><br/>
 
       </div>
 
 
-        <br/><br/> <br/><br/> <br/><br/>
+        <br/><br/> <br/><br/> <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
 
         <% include partials/footer.ejs %>
         <% include partials/jsIncludes.ejs %>
@@ -42,19 +85,36 @@
      /*
        Function to carry out the actual PUT request to S3 using the signed request from the app.
      */
+     function charge(){
+       var amount=5;
+       var orderId=new Date().getTime();
+       var productType='<%= session.type %>'
+       var user='<%= session.username %>'
+       var productInfo={"productType":productType,"user":user}
+       window.PUM.setData(amount, orderId, productInfo);
+       window.PUM.pay();
+     }
+
      function uploadFile(file, signedRequest, url){
+       var userUploading='<%= session.username %>'
+       //console.log("User uploading "+userUploading);
        const xhr = new XMLHttpRequest();
        xhr.open('PUT', signedRequest);
-       console.log("Signed Request "+signedRequest);
+       //console.log("Signed Request "+signedRequest);
        xhr.onreadystatechange = () => {
          if(xhr.readyState === 4){
            if(xhr.status === 200){
              /*document.getElementById('preview').src = url;
              document.getElementById('avatar-url').value = url;*/
-             console.log("File uploaded successfully");
+             document.getElementById('uploading').style.visibility = "hidden";
+             //document.getElementById('afterUpload').style.visibility = "visible";
+             document.getElementById('F8462690E8238951AB818D1B2BBD7957').style.visibility = "visible";
+             var fileName = "abc.zip";
+             '<%session["fileName"] = ' + fileName + '; %>';
+             //console.log("File uploaded successfully");
            }
            else{
-             alert('Could not upload file.');
+             alert('Could not upload file. Please try again');
            }
          }
        };
@@ -67,11 +127,18 @@
      */
      function getSignedRequest(file){
        const xhr = new XMLHttpRequest();
-       xhr.open('GET', `/sign-s3?file-name=${file.name}&file-type=${file.type}`);
+       // Handing File overwrite issue
+       var uploadTime=new Date().getTime();
+       var task='TASK-'+'<%= session.username %>'+uploadTime+'-';
+       //var fileName=${file.name};
+       //console.log("Hurray here is filename "+fileName);
+       xhr.open('GET', `/sign-s3?file-name=${task+file.name}&file-type=${file.type}`);
        xhr.onreadystatechange = () => {
          if(xhr.readyState === 4){
            if(xhr.status === 200){
              const response = JSON.parse(xhr.responseText);
+             //console.log("Actual Upload Request"+response.signedRequest);
+             document.getElementById('uploading').style.visibility = "visible";
              uploadFile(file, response.signedRequest, response.url);
            }
            else{
@@ -86,8 +153,15 @@
       start upload procedure by asking for a signed request from the app.
      */
      function initUpload(){
+       //document.getElementById('afterUpload').style.visibility = "hidden";
+       document.getElementById('F8462690E8238951AB818D1B2BBD7957').style.visibility = "hidden";
        const files = document.getElementById('file-input').files;
        const file = files[0];
+       /*for(var propName in file) {
+           var propValue = file[propName]
+          console.log(propName,propValue);
+       }*/
+       //console.log("File is "+file["name"]);
        if(file == null){
          return alert('No file selected.');
        }
@@ -100,10 +174,6 @@
          document.getElementById('file-input').onchange = initUpload;
      })();
      </script>
-
-
-
-
     </body>
 
 

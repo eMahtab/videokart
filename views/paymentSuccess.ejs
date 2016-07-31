@@ -1,0 +1,36 @@
+<html>
+
+
+    <head>
+        <title>Videokart : Memories that lasts forever</title>
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+        <% include partials/cssIncludes.ejs %>
+    </head>
+
+
+    <body style="background-color:#ffeb3b">
+
+      <% include partials/menu.ejs %>
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+      <div class="container">
+
+	      	<div class="row">
+                 <div class="text-center">
+                   <h3> Congratulation <code><%=session.username%></code> your order is processed successfully</h3>
+                   <br/>
+                   <h4> Finished video will be emailed to you within 1 day </h4>
+                   <br/>
+                   <h5> If interested <a class="plainLink" href="/gallery">checkout our other videos </a></h5>
+                 </div>
+		      </div>
+
+
+	    </div>
+        <br/><br/> <br/><br/> <br/><br/>
+
+        <!--<% include partials/footer.ejs %>-->
+        <% include partials/jsIncludes.ejs %>
+    </body>
+
+</html>

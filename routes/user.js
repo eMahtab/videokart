@@ -45,6 +45,7 @@ exports.login=function(req,res){
          console.log("Authentication Sucessfull");
          req.session.username=user.username;
          req.session.loggedIn=true;
+         req.session.userEmail=user.email;
          console.log("Got User : "+req.session.username);
          res.render("gallery",{session:req.session});
        }else{
@@ -65,6 +66,10 @@ exports.login=function(req,res){
     req.session.username=null;
     req.session.loggedIn=null;
     req.session.newuser=null;
+    req.session.type=null;
+    req.session.fileName=null;
+    req.session.userEmail=null;
+
     console.log("Logged Out :"+loggedOutUser);
 
     res.render('login',{session:req.session,loggedOutUser:loggedOutUser});
