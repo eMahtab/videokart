@@ -1,0 +1,52 @@
+<manifest alg="2" build="2017.0.0.363" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster" exportTarget="other" domain="Videokart.in" resolutions="1x" timestamp="1482252338974">
+  <folder name="css">
+    <file name="site_global.css" crc="443350757"/>
+    <file name="master_a-master.css" crc="4253787646" ref="petalsoflove-upload_pay-now:withlove-upload_pay-now:christmas-blackboard-upload_pay-now:family-christmas-upload_pay-now:about-us:christmas-particles-upload_pay-now:christmas-wishes-upload_pay-now:index:christmas-slideshow-upload_pay-now:santa-wishes-upload_pay-now:categories"/>
+    <file name="petalsoflove-upload_pay-now.css" crc="96224159" ref="petalsoflove-upload_pay-now"/>
+    <file name="withlove-upload_pay-now.css" crc="142341396" ref="withlove-upload_pay-now"/>
+    <file name="christmas-blackboard-upload_pay-now.css" crc="4126995234" ref="christmas-blackboard-upload_pay-now"/>
+    <file name="family-christmas-upload_pay-now.css" crc="3911327008" ref="family-christmas-upload_pay-now"/>
+    <file name="about-us.css" crc="3991908081" ref="about-us"/>
+    <file name="christmas-particles-upload_pay-now.css" crc="3761639303" ref="christmas-particles-upload_pay-now"/>
+    <file name="christmas-wishes-upload_pay-now.css" crc="4085453957" ref="christmas-wishes-upload_pay-now"/>
+    <file name="index.css" crc="3954677796" ref="index"/>
+    <file name="christmas-slideshow-upload_pay-now.css" crc="268168107" ref="christmas-slideshow-upload_pay-now"/>
+    <file name="santa-wishes-upload_pay-now.css" crc="3947182775" ref="santa-wishes-upload_pay-now"/>
+    <file name="categories.css" crc="3992172668" ref="categories"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:about-us:categories:christmas-slideshow-upload_pay-now:christmas-particles-upload_pay-now:petalsoflove-upload_pay-now:withlove-upload_pay-now:christmas-wishes-upload_pay-now:christmas-blackboard-upload_pay-now:santa-wishes-upload_pay-now:family-christmas-upload_pay-now"/>
+    <file name="museutils.js" crc="163421577" ref="index:about-us:categories:christmas-slideshow-upload_pay-now:christmas-particles-upload_pay-now:petalsoflove-upload_pay-now:withlove-upload_pay-now:christmas-wishes-upload_pay-now:christmas-blackboard-upload_pay-now:santa-wishes-upload_pay-now:family-christmas-upload_pay-now"/>
+    <file name="whatinput.js" crc="86476730" ref="index:about-us:categories:christmas-slideshow-upload_pay-now:christmas-particles-upload_pay-now:petalsoflove-upload_pay-now:withlove-upload_pay-now:christmas-wishes-upload_pay-now:christmas-blackboard-upload_pay-now:santa-wishes-upload_pay-now:family-christmas-upload_pay-now"/>
+    <file name="museconfig.js" crc="36584860" ref="index:about-us:categories:christmas-slideshow-upload_pay-now:christmas-particles-upload_pay-now:petalsoflove-upload_pay-now:withlove-upload_pay-now:christmas-wishes-upload_pay-now:christmas-blackboard-upload_pay-now:santa-wishes-upload_pay-now:family-christmas-upload_pay-now"/>
+    <file name="jquery.musemenu.js" crc="146495465" ref="index:about-us:categories:christmas-slideshow-upload_pay-now:christmas-particles-upload_pay-now:petalsoflove-upload_pay-now:withlove-upload_pay-now:christmas-wishes-upload_pay-now:christmas-blackboard-upload_pay-now:santa-wishes-upload_pay-now:family-christmas-upload_pay-now"/>
+    <file name="jquery.watch.js" crc="104486786" ref="index:about-us:categories:christmas-slideshow-upload_pay-now:christmas-particles-upload_pay-now:petalsoflove-upload_pay-now:withlove-upload_pay-now:christmas-wishes-upload_pay-now:christmas-blackboard-upload_pay-now:santa-wishes-upload_pay-now:family-christmas-upload_pay-now"/>
+    <file name="html5shiv.js" crc="4241844378" ref="index:about-us:categories:christmas-slideshow-upload_pay-now:christmas-particles-upload_pay-now:petalsoflove-upload_pay-now:withlove-upload_pay-now:christmas-wishes-upload_pay-now:christmas-blackboard-upload_pay-now:santa-wishes-upload_pay-now:family-christmas-upload_pay-now"/>
+    <file name="require.js" crc="244322403" ref="index:about-us:categories:christmas-slideshow-upload_pay-now:christmas-particles-upload_pay-now:petalsoflove-upload_pay-now:withlove-upload_pay-now:christmas-wishes-upload_pay-now:christmas-blackboard-upload_pay-now:santa-wishes-upload_pay-now:family-christmas-upload_pay-now"/>
+  </folder>
+  <folder name="images">
+    <file name="asset 2.png" crc="366615157" seo="true" ref="index:about-us:categories:christmas-slideshow-upload_pay-now:christmas-particles-upload_pay-now:petalsoflove-upload_pay-now:withlove-upload_pay-now:christmas-wishes-upload_pay-now:christmas-blackboard-upload_pay-now:santa-wishes-upload_pay-now:family-christmas-upload_pay-now"/>
+    <file name="pasted-svg-19094x19.svg" crc="309280989" seo="true" ref="index:about-us:categories:christmas-slideshow-upload_pay-now:christmas-particles-upload_pay-now:petalsoflove-upload_pay-now:withlove-upload_pay-now:christmas-wishes-upload_pay-now:christmas-blackboard-upload_pay-now:santa-wishes-upload_pay-now:family-christmas-upload_pay-now"/>
+    <file name="pasted svg 19094x19_poster_.png" crc="4078987450" ref="index"/>
+    <file name="pasted-svg-19094x192.svg" crc="4061985240" seo="true" ref="index:about-us:categories:christmas-slideshow-upload_pay-now:christmas-particles-upload_pay-now:petalsoflove-upload_pay-now:withlove-upload_pay-now:christmas-wishes-upload_pay-now:christmas-blackboard-upload_pay-now:santa-wishes-upload_pay-now:family-christmas-upload_pay-now"/>
+    <file name="pasted svg 19094x19_poster_2.png" crc="4164418136" ref="index"/>
+    <file name="pasted-svg-19072x19.svg" crc="155253794" seo="true" ref="index:about-us:categories:christmas-slideshow-upload_pay-now:christmas-particles-upload_pay-now:petalsoflove-upload_pay-now:withlove-upload_pay-now:christmas-wishes-upload_pay-now:christmas-blackboard-upload_pay-now:santa-wishes-upload_pay-now:family-christmas-upload_pay-now"/>
+    <file name="pasted svg 19072x19_poster_.png" crc="449223573" ref="index"/>
+    <file name="pasted-svg-18941x18.svg" crc="532570277" seo="true" ref="index:about-us:categories:christmas-slideshow-upload_pay-now:christmas-particles-upload_pay-now:petalsoflove-upload_pay-now:withlove-upload_pay-now:christmas-wishes-upload_pay-now:christmas-blackboard-upload_pay-now:santa-wishes-upload_pay-now:family-christmas-upload_pay-now"/>
+    <file name="pasted svg 18941x18_poster_.png" crc="519626403" ref="index"/>
+    <file name="pasted-svg-18956x18.svg" crc="206436586" seo="true" ref="index:about-us:categories:christmas-slideshow-upload_pay-now:christmas-particles-upload_pay-now:petalsoflove-upload_pay-now:withlove-upload_pay-now:christmas-wishes-upload_pay-now:christmas-blackboard-upload_pay-now:santa-wishes-upload_pay-now:family-christmas-upload_pay-now"/>
+    <file name="pasted svg 18956x18_poster_.png" crc="331597862" ref="index"/>
+    <file name="asset 3.png" crc="4058795567" seo="true" ref="index:about-us:categories:christmas-slideshow-upload_pay-now:christmas-particles-upload_pay-now:petalsoflove-upload_pay-now:withlove-upload_pay-now:christmas-wishes-upload_pay-now:christmas-blackboard-upload_pay-now:santa-wishes-upload_pay-now:family-christmas-upload_pay-now"/>
+  </folder>
+  <file name="index.html" crc="31098164" seo="true" mt="1482250577295" redirect="true"/>
+  <file name="about-us.html" crc="4193131119" seo="true" mt="1482250616427" redirect="true"/>
+  <file name="categories.html" crc="135009074" seo="true" mt="1482251335476" redirect="true"/>
+  <file name="christmas-slideshow-upload_pay-now.html" crc="3948987648" seo="true" mt="1482195856413" redirect="true"/>
+  <file name="christmas-particles-upload_pay-now.html" crc="328727228" seo="true" mt="1482195856413" redirect="true"/>
+  <file name="petalsoflove-upload_pay-now.html" crc="4142324320" seo="true" mt="1482197308922" redirect="true"/>
+  <file name="withlove-upload_pay-now.html" crc="337144700" seo="true" mt="1482195856413" redirect="true"/>
+  <file name="christmas-wishes-upload_pay-now.html" crc="3952893340" seo="true" mt="1482195856413" redirect="true"/>
+  <file name="christmas-blackboard-upload_pay-now.html" crc="3937850077" seo="true" mt="1482207908529" redirect="true"/>
+  <file name="santa-wishes-upload_pay-now.html" crc="6364949" seo="true" mt="1482208069477" redirect="true"/>
+  <file name="family-christmas-upload_pay-now.html" crc="346629689" seo="true" mt="1482251300286" redirect="true"/>
+</manifest>
